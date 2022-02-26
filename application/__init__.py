@@ -1,4 +1,5 @@
 import os
+from flask_talisman import Talisman
 from dotenv import load_dotenv
 from flask import Flask, render_template, url_for
 from flask_mail import Mail, Message
@@ -8,6 +9,7 @@ from wtforms.fields import EmailField
 from wtforms.validators import DataRequired, Email
 
 app = Flask(__name__)
+Talisman(app)
 
 # Secret Key config for WTF forms.
 app.config['SECRET_KEY'] = os.environ.get("SECRET_KEY")
