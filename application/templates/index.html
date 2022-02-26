@@ -1,0 +1,9 @@
+<h1>Send an email to yourself</h1>
+
+<section>
+    <form method="post">
+        {{ form.hidden_tag() }}
+        {{ form.email(placeholder="Your email address") }}
+        {{ form.submit }}
+    </form>
+</section>
